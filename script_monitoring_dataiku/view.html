@@ -1,0 +1,60 @@
+<div class="app-root">
+  <header class="app-header">
+    <div>
+      <h1>MONITORING CORE DATA</h1>
+      <div class="subtitle" id="subtitle">Loading…</div>
+    </div>
+    <div class="header-actions">
+      <button id="btn-refresh" class="btn btn-primary">↻ Refresh</button>
+    </div>
+  </header>
+
+  <section class="cards">
+    <div class="card"><div class="card-label">TOTAL RUNS</div><div class="card-value" id="kpi-total">0</div></div>
+    <div class="card success"><div class="card-label">SUCCESSFUL</div><div class="card-value" id="kpi-success">0</div></div>
+    <div class="card failed"><div class="card-label">FAILED</div><div class="card-value" id="kpi-failed">0</div></div>
+    <div class="card running"><div class="card-label">RUNNING</div><div class="card-value" id="kpi-running">0</div></div>
+    <div class="card"><div class="card-label">AVG DURATION</div><div class="card-value" id="kpi-avg">—</div></div>
+  </section>
+
+  <!-- KOTAK FILTER BARU -->
+  <section class="filters-wrapper">
+    <!-- Search bar diletakkan di atas (Full width) -->
+    <div class="search-container">
+      <input type="text" id="f-search" placeholder="🔍 Cari nama eksekusi (Job atau Scenario) secara cepat...">
+    </div>
+    
+    <!-- Tanggal, Status, dan Tombol Reset di bawahnya -->
+    <div class="filters">
+      <div class="filter">
+        <label>Tanggal Eksekusi</label>
+        <input type="date" id="f-date">
+      </div>
+      <div class="filter">
+        <label>Status</label>
+        <select id="f-status">
+          <option value="">Semua Status</option>
+          <option value="SUCCESS">SUCCESS</option>
+          <option value="FAILED">FAILED</option>
+          <option value="RUNNING">RUNNING</option>
+        </select>
+      </div>
+      <div class="filter">
+        <label>&nbsp;</label>
+        <button id="btn-clear" class="btn btn-ghost">Reset Filter</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="result-bar">
+    <div id="result-count">0 eksekusi ditampilkan</div>
+    <div class="legend">
+      <span class="badge success">SUCCESS</span>
+      <span class="badge failed">FAILED</span>
+      <span class="badge running">RUNNING</span>
+      <span class="badge warning">WARNING</span>
+    </div>
+  </section>
+
+  <section id="view-runs" class="view"></section>
+</div>

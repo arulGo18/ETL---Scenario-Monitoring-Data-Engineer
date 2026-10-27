@@ -1,0 +1,4 @@
+"kategori_beban_utang","client_id_count","bad_debt_flag_sum","count"
+"1 - Sehat (<10%)","283","23","283"
+"3 - Kritis (>20%)","209","38","209"
+"2 - Waspada (10%-20%)","190","15","190"
